@@ -220,11 +220,6 @@ extern "C" {
 #define TRICE_DEFERRED_BUFFER_SIZE 1024 // must be a multiple of 4
 #endif
 
-#ifndef TRICE_MCU_IS_BIG_ENDIAN
-//! TRICE_MCU_IS_BIG_ENDIAN needs to be 1 for TRICE64 macros on big endian MCUs for correct 64-bit values and 32-bit timestamp encoding.
-#define TRICE_MCU_IS_BIG_ENDIAN 0 // todo: Set this value automatically thru the used compiler.
-#endif
-
 #ifndef TRICE_TRANSFER_ORDER_IS_NOT_MCU_ENDIAN
 //! TRICE_TRANSFER_ORDER_IS_NOT_MCU_ENDIAN can be defined to 1 on little endian MCUs if the trice data are needed in network order,
 //! or on big endian MCUs if the trice data are needed in little endian order. You should avoid setting this to 1 because
